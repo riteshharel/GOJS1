@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  	
+		angular js
+	</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="MyApp">
+	<div ng-controller="MyCtrl">
+		<label>Name</label>
+		<input type="text" ng-model="name">
+		<h1>Welcome {{name}} to {{hello.title}}</h1>
+		<label>password</label>
+		<input type="password" ng-model="password">
+		<h2 ng-bind="password"></h2>
+		<h3>{{vvv}}</h3>
+	</div>
+ <script> angular.module("MyApp",[]).controller("MyCtrl",function($scope)
+	{
+	$scope.hello={};
+	$scope.hello.title="AngularJS";
+	});
+ </script>
+</body>
+</html>

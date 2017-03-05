@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>  	
+		angular js
+	</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<div ng-init="list1=[{name:'n1',r_no:1},{name:'n2',r_no:2}]">
+		<label>Name</label>
+		<input type="text" ng-model="name">
+		<h1>{{name}}</h1>
+		<p>List of Names:</p>
+		<ol>
+			<li ng-repeat="l in list1">
+			{{'Name:'+l.name+'\nRoll no:'+l.r_no}}
+			</li>
+		</ol>
+		<label>password</label>
+		<input type="password" ng-model="password">
+		<h2 ng-bind="password"></h2>
+	</div>
+ 
+</body>
+</html>
